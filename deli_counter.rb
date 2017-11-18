@@ -17,3 +17,8 @@ def take_a_number(katz_deli, name)
   line_number = katz_deli.index(name) + 1
   puts "Welcome, #{name}. You are number #{line_number} in line."
 end
+
+def now_serving(katz_deli)
+  current_customer = katz_deli.shift
+  puts "Currently serving #{current_customer}."
+end
