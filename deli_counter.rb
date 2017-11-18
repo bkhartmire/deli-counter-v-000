@@ -1,15 +1,19 @@
 # Write your code here.
 katz_deli = []
 
-def line (katz_deli, name)
+def line (katz_deli)
   if katz_deli.size == 0
     puts "The line is currently empty."
   else
-    katz_deli.push(name)
+    current_line = "The line is currently: "
+    katz_deli.each do |customer|
+      current_line << "#{katz_deli.index(name) + 1}. #{customer} "
+    end
+    puts current_line
   end
 end
-    
+
 def take_a_number(katz_deli, name)
-  line_number = katz_deli.index(name) - 1
+  line_number = katz_deli.index(name) + 1
   puts "Welcome, #{name}. You are number #{line_number} in line."
 end
